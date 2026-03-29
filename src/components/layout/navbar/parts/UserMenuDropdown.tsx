@@ -116,7 +116,7 @@ export const UserMenuDropdown = ({
 
       {/* GitHub */}
       <Link
-        href="https://github.com/nellavio/nellavio"
+        href="https://github.com/nellavio/nellavio-layout"
         target="_blank"
         className="px-4 py-2 pr-5 pl-4 flex hover:bg-dropdownBgHover cursor-pointer focus-visible:bg-dropdownBgHover"
         role="menuitem"

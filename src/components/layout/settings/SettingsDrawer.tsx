@@ -169,7 +169,7 @@ export const SettingsDrawer = ({
             {/* GitHub Section */}
             <div className="mt-auto border-t border-settingsDrawerDivider bg-settingsDrawerHeaderBg">
               <Link
-                href="https://github.com/nellavio/nellavio"
+                href="https://github.com/nellavio/nellavio-layout"
                 target="_blank"
                 tabIndex={0}
                 className="flex items-center justify-center gap-2 py-4 bg-settingsDrawerGithubBg hover:bg-settingsDrawerGithubBgHover transition-colors focus-visible:outline-offset-[-2px]"

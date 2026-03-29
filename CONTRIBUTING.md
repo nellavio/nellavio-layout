@@ -5,8 +5,8 @@ Every form of contribution is valuable. Below are the main ways to get involved:
 
 ## 1. Share Feedback and Ideas 💡
 
-- Use the **[Discussions](https://github.com/nellavio/nellavio/discussions/1)** on GitHub to share feedback, suggestions, or ideas for improvement.
-- Open an **[Issue](https://github.com/nellavio/nellavio/issues)** if you've found a bug or something doesn't work as expected.
+- Use the **[Discussions](https://github.com/nellavio/nellavio-layout/discussions/1)** on GitHub to share feedback, suggestions, or ideas for improvement.
+- Open an **[Issue](https://github.com/nellavio/nellavio-layout/issues)** if you've found a bug or something doesn't work as expected.
 
 ## 2. Support Development 🔥
 
@@ -19,13 +19,13 @@ Feel free to fork the repository and submit a merge requests. If you've spotted 
 ### Development setup
 
 ```bash
-git clone https://github.com/nellavio/nellavio.git
-cd nellavio
+git clone https://github.com/nellavio/nellavio-layout.git
+cd nellavio-layout
 npm install
 npm run dev
 ```
 
-The app runs at `http://localhost:3000` in standalone mode with mock data — no backend needed.
+The app runs at `http://localhost:3000`
 
 To browse and develop UI components in isolation, run Storybook:
 
@@ -54,7 +54,7 @@ Husky pre-commit hooks will automatically run ESLint and Prettier on staged file
 
 - Named exports over default exports
 - Arrow functions over function declarations
-- Keep files under 300 lines — split into smaller modules if needed
+- Keep files under 300 lines - split into smaller modules if needed
 - Group imports: external libraries first, then internal imports, separated by blank lines
 - Use `async/await` with `try/catch` instead of `.then()/.catch()`
 - Always log errors in `catch` blocks
@@ -63,7 +63,7 @@ Husky pre-commit hooks will automatically run ESLint and Prettier on staged file
 
 ### What makes a good PR
 
-- Focused — one concern per PR
+- Focused - one concern per PR
 - Passes all CI checks (lint, type-check, tests, build)
 - Includes a clear description of what changed and why
 - Does not introduce console errors or warnings

@@ -55,7 +55,7 @@ export const ContributingModal = ({
                 <li className="mb-2">
                   Use the{" "}
                   <a
-                    href="https://github.com/nellavio/nellavio/discussions/1"
+                    href="https://github.com/nellavio/nellavio-layout/discussions/1"
                     target="_blank"
                     rel="noopener noreferrer"
                     tabIndex={0}
@@ -69,7 +69,7 @@ export const ContributingModal = ({
                 <li>
                   Open an{" "}
                   <a
-                    href="https://github.com/nellavio/nellavio/issues"
+                    href="https://github.com/nellavio/nellavio-layout/issues"
                     target="_blank"
                     rel="noopener noreferrer"
                     tabIndex={0}
@@ -113,7 +113,7 @@ export const ContributingModal = ({
                 For more details on development setup, code conventions, and the
                 pull request process, check out the{" "}
                 <a
-                  href="https://github.com/nellavio/nellavio/blob/main/CONTRIBUTING.md"
+                  href="https://github.com/nellavio/nellavio-layout/blob/main/CONTRIBUTING.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   tabIndex={0}
