@@ -13,7 +13,7 @@ export const useChangelogModal = () => {
     const fetchChangelog = async () => {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/nellavio/nellavio/main/CHANGELOG.md",
+          "https://raw.githubusercontent.com/nellavio/nellavio-layout/main/CHANGELOG.md",
         );
 
         if (!response.ok) {

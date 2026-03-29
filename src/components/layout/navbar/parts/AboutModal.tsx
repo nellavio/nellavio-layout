@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GithubIcon } from "@/assets/icons/GithubIcon";
 import { LinkedinIcon } from "@/assets/icons/LinkedinIcon";
 import { MailIcon } from "@/assets/icons/MailIcon";
+import { StorybookIcon } from "@/assets/icons/StorybookIcon";
 import { TwitterIcon } from "@/assets/icons/TwitterIcon";
 import { Button } from "@/components/common/shadcn/button";
 import {
@@ -46,11 +47,19 @@ export const AboutModal = ({ closeModal, returnFocusRef }: AboutModalProps) => {
           <DialogDescription asChild>
             <div className="text-primaryText text-base md:text-sm 1xl:text-base w-full text-left">
               <p className="mb-4 text-base md:text-sm 1xl:text-base">
-                Nellavio is a free, open-source dashboard starter designed for
-                building modern SaaS products, internal tools and data-rich
-                admin panels. It provides the UI components, pages and patterns
-                that will give you a solid head start for building your own
-                application
+                Nellavio Layout is a lightweight, open-source dashboard starter
+                - a stripped down version of{" "}
+                <Link
+                  href="https://github.com/nellavio/nellavio"
+                  target="_blank"
+                  className="text-coloredLinkText hover:underline"
+                >
+                  Nellavio
+                </Link>
+                . It provides the core layout shell along with a collection of
+                ready-to-use UI components, forms, tables and charts. Ideal
+                starting point for building modern SaaS products, internal tools
+                and data-rich admin panels.
               </p>
             </div>
           </DialogDescription>
@@ -61,12 +70,12 @@ export const AboutModal = ({ closeModal, returnFocusRef }: AboutModalProps) => {
               className="flex-1 xsm:flex-initial xsm:w-auto h-full sm:!px-6 gap-2"
             >
               <Link
-                href="https://github.com/nellavio/nellavio"
+                href="https://github.com/nellavio/nellavio-layout"
                 target="_blank"
                 tabIndex={0}
               >
                 <GithubIcon />
-                Front-end
+                Repository
               </Link>
             </Button>
             <Button
@@ -75,12 +84,12 @@ export const AboutModal = ({ closeModal, returnFocusRef }: AboutModalProps) => {
               className="flex-1 xsm:flex-initial xsm:w-auto h-full sm:!px-6 gap-2"
             >
               <Link
-                href="https://github.com/nellavio/nellavio-backend"
+                href="https://storybook.nellavio.com/"
                 target="_blank"
                 tabIndex={0}
               >
-                <GithubIcon />
-                Back-end
+                <StorybookIcon />
+                Storybook
               </Link>
             </Button>
           </div>
@@ -99,68 +108,15 @@ export const AboutModal = ({ closeModal, returnFocusRef }: AboutModalProps) => {
             <p className="text-left w-full mt-4 text-xl md:text-lg 1xl:text-xl">
               Tech stack:
             </p>
-            <div className="mt-4">
-              <p className="text-primaryText mb-2">Front-End:</p>
-            </div>
-            <ul className="list-disc list-inside mb-4 pl-3 text-primaryText">
+            <ul className="list-disc list-inside mb-4 pl-3 text-primaryText mt-4">
               <li>ReactJS</li>
               <li>NextJS</li>
               <li>TypeScript</li>
               <li>Tailwind</li>
               <li>Shadcn</li>
               <li>Zustand</li>
-              <li>Apollo Client</li>
               <li>Recharts</li>
-              <li>Better-Auth</li>
               <li>Vitest</li>
-            </ul>
-            <div>
-              <p className="text-primaryText mb-2">Back-End:</p>
-            </div>
-            <ul className="list-disc list-inside pl-3 mb-4">
-              <li>NodeJS</li>
-              <li>Fastify</li>
-              <li>PostgreSQL</li>
-              <li>Prisma</li>
-              <li>Better-Auth</li>
-              <li>GraphQL</li>
-            </ul>
-          </div>
-          <div className="text-primaryText text-base md:text-sm 1xl:text-base w-full text-left mt-2">
-            <p className="text-left w-full text-xl md:text-lg 1xl:text-xl mb-4">
-              Additional resources:
-            </p>
-            <ul className="list-disc list-inside pl-3 mb-4">
-              <li>
-                <Link
-                  href="https://storybook.nellavio.com/"
-                  target="_blank"
-                  tabIndex={0}
-                  className="text-coloredLinkText hover:underline font-medium"
-                >
-                  Storybook
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://auth.nellavio.com/"
-                  target="_blank"
-                  tabIndex={0}
-                  className="text-coloredLinkText hover:underline font-medium"
-                >
-                  Authentication docs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://github.com/nellavio/nellavio-layout"
-                  target="_blank"
-                  tabIndex={0}
-                  className="text-coloredLinkText hover:underline font-medium"
-                >
-                  Lightweight version
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="flex items-center gap-4 mt-6 mb-6 pt-5 border-t border-mainBorder">

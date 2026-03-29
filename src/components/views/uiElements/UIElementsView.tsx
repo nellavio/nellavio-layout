@@ -30,13 +30,13 @@ export const UIElementsView = () => {
       {/* Left Column */}
       <div className="flex flex-col gap-6">
         <ButtonsUI />
-        <CommandUI />
-        <AvatarsUI />
+        <AlertsUI />
+        <PopoverUI />
         <div className="hidden lg:block">
           <TooltipsUI />
         </div>
-        <AlertsUI />
-        <ToastsUI />
+        <CommandUI />
+        <ProgressUI />
         <SkeletonsUI />
       </div>
 
@@ -45,11 +45,11 @@ export const UIElementsView = () => {
         <DialogsUI />
         <DropdownMenuUI />
         <BadgesUI />
-        <PopoverUI />
-        <ProgressUI />
         <BreadcrumbsUI />
         <TabsUI />
+        <AvatarsUI />
         <SeparatorsUI />
+        <ToastsUI />
         <PaginationUI />
       </div>
     </div>
