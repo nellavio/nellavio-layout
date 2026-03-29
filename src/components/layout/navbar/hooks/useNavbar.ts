@@ -3,7 +3,6 @@ import { useTheme } from "next-themes";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useDropdown } from "@/hooks/useDropdown";
-import { useSession } from "@/services/auth/auth-client";
 import { useLayoutStore } from "@/store/layoutStore";
 import { BREAKPOINTS } from "@/styles/breakpoints";
 
@@ -20,18 +19,11 @@ export const useNavbar = () => {
   const toggleMobileMenu = useLayoutStore((s) => s.toggleMobileMenu);
   const isSideMenuOpen = useLayoutStore((s) => s.isSideMenuOpen);
   const t = useTranslations("navbar");
-  const { data: sessionData, isPending } = useSession();
 
-  /**
-   * Returns `null` while the session is loading to avoid flashing
-   * logged-in UI before auth state is resolved.
-   */
-  const session = !isPending
-    ? {
-        username: sessionData?.user?.email || null,
-        isLoggedIn: !!sessionData,
-      }
-    : null;
+  const session = {
+    username: null,
+    isLoggedIn: false,
+  };
 
   const closeMobileMenu = () => {
     if (isMobileMenuOpen) {

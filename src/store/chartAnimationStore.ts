@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-export type ChartPageId = "homepage" | "analytics" | "charts";
+export type ChartPageId = "charts";
 
 interface ChartAnimationStore {
   shouldStartChartAnimations: boolean;

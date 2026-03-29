@@ -1,27 +1,4 @@
 {
-  "homepage": {
-    "revenueOverTime": {
-      "title": "Dochód miesięczny"
-    },
-    "threeSmallCards": {
-      "monthlyTarget": "Miesięczny cel"
-    },
-    "fourSmallCards": {
-      "monthlyTarget": "Miesięczny cel"
-    },
-    "bestSellingProducts": {
-      "title": "Bestsellery"
-    },
-    "customerSatisfaction": {
-      "title": "Zadowolenie klientów"
-    },
-    "revenuePerCountry": {
-      "title": "Przychód według kraju"
-    },
-    "weeklyPerformance": {
-      "title": "Wydajność tygodniowa"
-    }
-  },
   "pagination": {
     "previous": "Poprzednia",
     "next": "Następna",
@@ -31,180 +8,9 @@
     "results": "wyników",
     "itemsPerPage": "Wyników na stronę"
   },
-  "orders": {
-    "selectPlaceholder": {
-      "allProducts": "Wszystkie produkty",
-      "allUsers": "Wszyscy klienci",
-      "anyPrice": "Dowolna cena",
-      "anyDeliveryType": "Dowolna dostawa",
-      "anyStatus": "Dowolny status"
-    },
-    "tableHeader": {
-      "productName": "Nazwa produktu",
-      "user": "Klient",
-      "price": "Cena",
-      "deliveryType": "Typ dostawy",
-      "date": "Data",
-      "status": "Status"
-    },
-    "deliveryType": {
-      "twoDayShipping": "Dwudniowa dostawa",
-      "standardShipping": "Standardowa dostawa",
-      "freeShipping": "Darmowa dostawa",
-      "expressShipping": "Ekspresowa dostawa"
-    },
-    "status": {
-      "inTransit": "W transporcie",
-      "delivered": "Dostarczone",
-      "shipped": "Wysłane"
-    },
-    "button": {
-      "clearFilters": "Wyczyść filtry",
-      "xlsx": "Eksport do XLSX"
-    },
-    "searchField": {
-      "searchOrders": "Szukaj zamówień..."
-    },
-    "orderModal": {
-      "title": "Szczegóły zamówienia",
-      "id": "ID",
-      "product": "Produkt",
-      "customer": "Klient",
-      "price": "Cena",
-      "shipping": "Dostawa",
-      "date": "Data",
-      "status": "Status",
-      "priority": "Priorytet",
-      "normal": "Normalny"
-    }
-  },
-  "customers": {
-    "tableHeader": {
-      "photo": "Zdjęcie",
-      "firstName": "Imię",
-      "lastName": "Nazwisko",
-      "city": "Miasto",
-      "country": "Kraj",
-      "phone": "Telefon",
-      "totalBuys": "Suma wydatków"
-    },
-    "searchField": {
-      "searchCustomers": "Szukaj klientów..."
-    },
-    "button": {
-      "clearFilters": "Wyczyść filtry",
-      "clearFilter": "Wyczyść filtr",
-      "filterByCountry": "Filtruj wg kraju",
-      "sortBy": "Sortuj wg",
-      "ascending": "Malejąco",
-      "descending": "Rosnąco",
-      "clearSorting": "Bez sortowania",
-      "xlsx": "Eksport do XLSX"
-    },
-    "country": {
-      "usa": "USA",
-      "australia": "Australia",
-      "france": "Francja",
-      "norway": "Norwegia",
-      "unitedKingdom": "Wielka Brytania"
-    },
-    "city": {
-      "newYork": "Nowy Jork",
-      "munich": "Monachium",
-      "cologne": "Kolonia",
-      "london": "Londyn"
-    },
-    "chip": {
-      "country": "Kraj",
-      "sortedBy": "Sortowanie wg"
-    },
-    "customerModal": {
-      "moneySpent": "Wydatki",
-      "totalOrders": "Zamówienia",
-      "phone": "Telefon",
-      "email": "E-mail",
-      "returns": "Zwroty",
-      "loyaltyPoints": "Punkty lojalnościowe"
-    }
-  },
-  "products": {
-    "header": {
-      "type": "Typ",
-      "price": "Cena",
-      "markup": "Marża",
-      "profit": "Zysk",
-      "viewPhoto": "Zobacz zdjęcie"
-    },
-    "metrics": {
-      "inventoryStatus": "Stan magazynu",
-      "monthlyTarget": "Miesięczny cel",
-      "orderFullfillment": "Realizacja zamówień",
-      "conversionRate": "Wskaźnik konwersji"
-    },
-    "pdf": {
-      "exportToPdf": "Eksport do PDF"
-    },
-    "clipboard": {
-      "copiedToClipboard": "Skopiowano do schowka!"
-    },
-    "mobileList": {
-      "showAllProducts": "Lista produktów"
-    }
-  },
-  "analytics": {
-    "assetPerformance": {
-      "title": "Wydajność aktywów"
-    },
-    "todaySales": {
-      "title": "Dzisiejsza sprzedaż"
-    },
-    "totalProfit": {
-      "title": "Całkowity zysk"
-    },
-    "revenueTrends": {
-      "title": "Trendy przychodów"
-    },
-    "yearOverview": {
-      "title": "Przegląd roczny"
-    },
-    "marketMetrics": {
-      "title": "Wskażniki rynkowe"
-    },
-    "revenueDistribution": {
-      "title": "Rozkład przychodów"
-    }
-  },
-  "calendar": {
-    "deleteEventModalTitle": "Czy na pewno?",
-    "deleteEventModalSubtitle": "Naciśnij tak, jeśli chcesz",
-    "delete": "usunąć",
-    "move": "przenieść",
-    "theEvent": "wydarzenie",
-    "yes": "Tak",
-    "cancel": "Anuluj",
-    "addEventModalTitle": "Nowe wydarzenie",
-    "addEventModalSubtitle": "Proszę podać czas i tytuł nowego wydarzenia",
-    "addEventModalPlaceholder": "Tytuł wydarzenia",
-    "addEventConfirmButton": "Potwierdź",
-    "addEventTitleRequiredError": "Tytuł wydarzenia jest wymagany",
-    "addEventLengthError": "Tytuł nie może przekraczać 20 znaków",
-    "addEventIncorrectTime": "Nieprawidłowy przedział czasu"
-  },
-  "singleCharts": {
-    "bars": {
-      "title": "Sprzedaż produktów (USD)"
-    }
-  },
   "sideMenu": {
     "main": "Intro",
     "dashboard": "Panel główny",
-    "eCommerce": "E-commerce",
-    "orders": "Zamówienia",
-    "customers": "Klienci",
-    "products": "Produkty",
-    "analytics": "Analityka",
-    "calendar": "Kalendarz",
-    "userProfile": "Profil Użytkownika",
     "authentication": "Uwierzytelnianie",
     "login": "Logowanie",
     "register": "Rejestracja",
@@ -214,15 +20,7 @@
     "forms": "Formularze",
     "tables": "Tabele",
     "charts": "Wykresy",
-    "shadcn": "Shadcn",
-    "tanstack": "Tanstack",
-    "recharts": "Recharts",
-    "singleCharts": "Wykresy",
     "pages": "Aplikacje",
-    "area": "Obszar",
-    "bars": "Słupki",
-    "scatter": "Rozrzut",
-    "line": "Linia",
     "signIn": "Zaloguj się",
     "language": "Język",
     "githubRepository": "GitHub",
@@ -257,29 +55,6 @@
       "placeholder": "Szukaj...",
       "noResults": "Nie znaleziono wyników",
       "sections": {
-        "revenueOverTime": "Dochód miesięczny",
-        "bestsellingProducts": "Bestsellery",
-        "customerSatisfaction": "Zadowolenie klientów",
-        "revenuePerCountry": "Przychód według kraju",
-        "salesCard": "Obrót",
-        "profitCard": "Zysk",
-        "trafficCard": "Ruch",
-        "customersCard": "Klienci",
-        "assetPerformance": "Wydajność aktywów",
-        "todaysSales": "Dzisiejsza sprzedaż",
-        "totalProfit": "Całkowity zysk",
-        "revenueTrends": "Trendy przychodów",
-        "yearOverview": "Przegląd roczny",
-        "marketMetrics": "Wskażniki rynkowe",
-        "revenueDistribution": "Rozkład przychodów",
-        "customers": "Klienci",
-        "calendar": "Kalendarz",
-        "orders": "Zamówienia",
-        "products": "Produkty",
-        "profileHeader": "Nagłówek profilu",
-        "about": "O mnie",
-        "accountSettings": "Ustawienia konta",
-        "recentActivity": "Ostatnia aktywność",
         "buttons": "Przyciski",
         "command": "Paleta poleceń",
         "avatars": "Awatary",
@@ -327,12 +102,6 @@
       },
       "pages": {
         "dashboard": "Panel główny",
-        "analytics": "Analityka",
-        "customers": "Klienci",
-        "calendar": "Kalendarz",
-        "orders": "Zamówienia",
-        "products": "Produkty",
-        "userProfile": "Profil",
         "uiElements": "Elementy UI",
         "forms": "Formularze",
         "tables": "Tabele",
@@ -406,41 +175,11 @@
   "breadcrumbs": {
     "firstPart": "Nellavio",
     "dashboard": "Panel główny",
-    "orders": "Zamówienia",
-    "customers": "Klienci",
-    "products": "Produkty",
-    "analytics": "Analityka",
-    "calendar": "Kalendarz",
-    "profile": "Profil",
     "charts": "Wykresy",
     "ui elements": "Elementy UI",
     "forms": "Formularze",
     "tables": "Tabele",
-    "ecommerce": "E-commerce",
     "components": "Komponenty"
-  },
-  "profile": {
-    "memberSince": "Członek od",
-    "editProfile": "Edytuj profil",
-    "saveChanges": "Zapisz zmiany",
-    "contactInformation": "Informacje kontaktowe",
-    "email": "E-mail",
-    "phone": "Telefon",
-    "location": "Lokalizacja",
-    "socialLinks": "Media społecznościowe",
-    "quickStats": "Szybkie statystyki",
-    "totalOrders": "Wszystkie zamówienia",
-    "completedTasks": "Ukończone zadania",
-    "activeProjects": "Aktywne projekty",
-    "about": "O mnie",
-    "accountSettings": "Ustawienia konta",
-    "emailNotifications": "Powiadomienia e-mail",
-    "emailNotificationsDesc": "Otrzymuj aktualizacje e-mail o swoim koncie",
-    "twoFactorAuth": "Uwierzytelnianie dwuskładnikowe",
-    "twoFactorAuthDesc": "Dodaj dodatkową warstwę bezpieczeństwa do konta",
-    "darkMode": "Tryb ciemny",
-    "darkModeDesc": "Włącz ciemny motyw",
-    "recentActivity": "Ostatnia aktywność"
   },
   "uiElements": {
     "buttons": "Przyciski",

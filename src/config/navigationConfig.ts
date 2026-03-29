@@ -1,14 +1,10 @@
-import { AnalyticsIcon } from "../assets/icons/AnalyticsIcon";
 import { BugIcon } from "../assets/icons/BugIcon";
-import { CalendarIcon } from "../assets/icons/CalendarIcon";
 import { DashboardIcon } from "../assets/icons/DashboardIcon";
 import { DonutIcon } from "../assets/icons/DonutIcon";
-import { EcommerceIcon } from "../assets/icons/EcommerceIcon";
 import { FormsIcon } from "../assets/icons/FormsIcon";
 import { PasswordIcon } from "../assets/icons/PasswordIcon";
 import { TablesIcon } from "../assets/icons/TablesIcon";
 import { UIElementsIcon } from "../assets/icons/UIElementsIcon";
-import { UserProfileIcon } from "../assets/icons/UserProfileIcon";
 import type { MenuConfigEntry } from "../components/layout/sideMenu/types";
 
 /**
@@ -21,67 +17,7 @@ export const menuConfig: MenuConfigEntry[] = [
     titleKey: "dashboard",
     Icon: DashboardIcon,
     path: "/",
-    sections: [
-      { id: "revenueOverTime", titleKey: "revenueOverTime" },
-      { id: "bestsellingProducts", titleKey: "bestsellingProducts" },
-      { id: "customerSatisfaction", titleKey: "customerSatisfaction" },
-      { id: "revenuePerCountry", titleKey: "revenuePerCountry" },
-    ],
-  },
-  {
-    type: "submenu",
-    titleKey: "eCommerce",
-    Icon: EcommerceIcon,
-    submenuItems: [
-      {
-        titleKey: "orders",
-        path: "/orders",
-        sections: [{ id: "orders", titleKey: "orders" }],
-      },
-      {
-        titleKey: "customers",
-        path: "/customers",
-        sections: [{ id: "customers", titleKey: "customers" }],
-      },
-      {
-        titleKey: "products",
-        path: "/products",
-        sections: [{ id: "products", titleKey: "products" }],
-      },
-    ],
-  },
-  {
-    type: "item",
-    titleKey: "analytics",
-    Icon: AnalyticsIcon,
-    path: "/analytics",
-    sections: [
-      { id: "assetPerformance", titleKey: "assetPerformance" },
-      { id: "todaysSales", titleKey: "todaysSales" },
-      { id: "totalProfit", titleKey: "totalProfit" },
-      { id: "revenueTrends", titleKey: "revenueTrends" },
-      { id: "yearOverview", titleKey: "yearOverview" },
-      { id: "marketMetrics", titleKey: "marketMetrics" },
-      { id: "revenueDistribution", titleKey: "revenueDistribution" },
-    ],
-  },
-  {
-    type: "item",
-    titleKey: "userProfile",
-    Icon: UserProfileIcon,
-    path: "/profile",
-    sections: [
-      { id: "about", titleKey: "about" },
-      { id: "accountSettings", titleKey: "accountSettings" },
-      { id: "recentActivity", titleKey: "recentActivity" },
-    ],
-  },
-  {
-    type: "item",
-    titleKey: "calendar",
-    Icon: CalendarIcon,
-    path: "/calendar",
-    sections: [{ id: "calendar", titleKey: "calendar" }],
+    sections: [],
   },
   {
     type: "submenu",

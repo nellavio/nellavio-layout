@@ -9,9 +9,6 @@ import type { FontType } from "../styles/fonts";
  * They are consumed by Zustand stores, providers and UI components.
  */
 export const APP_DEFAULTS = {
-  /** Homepage card layout: "three-cards" or "four-cards" */
-  homepageLayout: "three-cards" as "three-cards" | "four-cards",
-
   /** Font family: "default" (Outfit) or "alternative" (Open Sans) */
   fontType: "default" as FontType,
 

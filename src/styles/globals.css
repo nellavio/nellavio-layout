@@ -3,9 +3,7 @@
 @import "./themes/light.css";
 @import "./themes/dark.css";
 @import "./themes/authBgPattern.css";
-@import "./overrides/calendar.css";
 @import "./overrides/datepicker.css";
-@import "./overrides/lightbox.css";
 
 /* Custom breakpoints */
 @theme {
@@ -261,12 +259,6 @@ input:-webkit-autofill:active {
 
 .alternativeScrollbar {
   --scrollbar-bg: var(--color-primaryBg);
-}
-
-/* Prevent stretching customer photo vertically */
-.customersTable img {
-  min-width: 40px;
-  min-height: 40px;
 }
 
 /* Override Tailwind v4 transition/transition-colors to exclude outline-color,

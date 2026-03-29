@@ -54,15 +54,15 @@ describe("useSearchInput", () => {
       const controls = createControls(true);
       const { result } = renderHook(() => useSearchInput(controls));
 
-      typeSearch(result, "revenue");
+      typeSearch(result, "buttons");
       expect(result.current.filteredSections.length).toBeGreaterThan(0);
       expect(
         result.current.filteredSections.every(
           (s) =>
-            s.translatedSection.toLowerCase().includes("revenue") ||
-            s.translatedPage.toLowerCase().includes("revenue") ||
-            s.sectionTitleKey.toLowerCase().includes("revenue") ||
-            s.pageTitleKey.toLowerCase().includes("revenue"),
+            s.translatedSection.toLowerCase().includes("buttons") ||
+            s.translatedPage.toLowerCase().includes("buttons") ||
+            s.sectionTitleKey.toLowerCase().includes("buttons") ||
+            s.pageTitleKey.toLowerCase().includes("buttons"),
         ),
       ).toBe(true);
 
@@ -74,10 +74,10 @@ describe("useSearchInput", () => {
       const controls = createControls(true);
       const { result } = renderHook(() => useSearchInput(controls));
 
-      typeSearch(result, "Analytics");
+      typeSearch(result, "forms");
       expect(
         result.current.filteredSections.every(
-          (s) => s.pageTitleKey === "analytics",
+          (s) => s.pageTitleKey === "forms",
         ),
       ).toBe(true);
     });
@@ -88,9 +88,9 @@ describe("useSearchInput", () => {
       const controls = createControls();
       const { result } = renderHook(() => useSearchInput(controls));
 
-      typeSearch(result, "orders");
+      typeSearch(result, "tables");
 
-      expect(result.current.searchText).toBe("orders");
+      expect(result.current.searchText).toBe("tables");
       expect(result.current.highlightedIndex).toBe(-1);
       expect(controls.open).toHaveBeenCalled();
       expect(controls.closeOthers).toHaveBeenCalled();
@@ -116,8 +116,8 @@ describe("useSearchInput", () => {
       const controls = createControls(true);
       const { result } = renderHook(() => useSearchInput(controls));
 
-      // Filter to single result so we can test bounds
-      typeSearch(result, "Calendar");
+      // Filter to a small result set so we can test bounds
+      typeSearch(result, "areaChart");
       const count = result.current.filteredSections.length;
 
       act(() => {
@@ -174,17 +174,23 @@ describe("useSearchInput", () => {
 
   describe("handleSectionClick", () => {
     it("closes dropdown and scrolls to element when on same page", () => {
+      Object.defineProperty(window, "location", {
+        value: { pathname: "/ui-elements" },
+        writable: true,
+      });
+
       const scrollIntoViewMock = vi.fn();
       const el = document.createElement("div");
       el.scrollIntoView = scrollIntoViewMock;
-      el.id = "revenueOverTime";
+      el.id = "buttons";
       document.body.appendChild(el);
 
       const controls = createControls(true);
       const { result } = renderHook(() => useSearchInput(controls));
 
+      typeSearch(result, "buttons");
       const section = result.current.filteredSections.find(
-        (s) => s.id === "revenueOverTime",
+        (s) => s.id === "buttons",
       );
 
       act(() => {

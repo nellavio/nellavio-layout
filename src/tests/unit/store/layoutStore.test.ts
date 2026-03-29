@@ -3,9 +3,7 @@ import { useLayoutStore } from "@/store/layoutStore";
 const initialState = {
   isMobileMenuOpen: false,
   isSideMenuOpen: true,
-  isLoggingOut: false,
   isLoggingIn: false,
-  homepageLayout: "three-cards" as const,
   fontType: "default" as const,
   sidebarDefaultState: "expanded" as const,
   chartAnimationsEnabled: false,
@@ -22,7 +20,6 @@ describe("layoutStore", () => {
     const state = useLayoutStore.getState();
     expect(state.isSideMenuOpen).toBe(true);
     expect(state.isMobileMenuOpen).toBe(false);
-    expect(state.homepageLayout).toBe("three-cards");
     expect(state.fontType).toBe("default");
     expect(state.sidebarDefaultState).toBe("expanded");
     expect(state.chartAnimationsEnabled).toBe(false);
@@ -51,11 +48,6 @@ describe("layoutStore", () => {
     expect(useLayoutStore.getState().isMobileMenuOpen).toBe(false);
   });
 
-  it("setHomepageLayout updates layout", () => {
-    useLayoutStore.getState().setHomepageLayout("four-cards");
-    expect(useLayoutStore.getState().homepageLayout).toBe("four-cards");
-  });
-
   it("setSidebarDefaultState to collapsed sets isSideMenuOpen to false", () => {
     useLayoutStore.getState().setSidebarDefaultState("collapsed");
     const state = useLayoutStore.getState();
@@ -79,11 +71,6 @@ describe("layoutStore", () => {
   it("setFixedNavbar updates value", () => {
     useLayoutStore.getState().setFixedNavbar(false);
     expect(useLayoutStore.getState().fixedNavbar).toBe(false);
-  });
-
-  it("setIsLoggingOut updates value", () => {
-    useLayoutStore.getState().setIsLoggingOut(true);
-    expect(useLayoutStore.getState().isLoggingOut).toBe(true);
   });
 
   it("setIsLoggingIn updates value", () => {

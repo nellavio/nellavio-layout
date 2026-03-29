@@ -23,7 +23,6 @@ import {
 } from "@/components/common/shadcn/select";
 import { Switch } from "@/components/common/shadcn/switch";
 
-import { HomepageLayoutSection } from "./parts/HomepageLayoutSection";
 import { SidebarModeSection } from "./parts/SidebarModeSection";
 import { useSettings } from "./useSettings";
 
@@ -124,7 +123,6 @@ export const SettingsDrawer = ({
               </Select>
             </div>
 
-            <HomepageLayoutSection />
             <SidebarModeSection />
 
             {/* Alternative Font Section */}

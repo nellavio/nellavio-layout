@@ -134,11 +134,3 @@ vi.mock("@/i18n/navigation", () => ({
   }),
   usePathname: () => "/",
 }));
-
-// Mock auth services
-vi.mock("@/services/auth/auth-client", () => ({
-  signIn: { email: vi.fn() },
-  signUp: { email: vi.fn() },
-  signOut: vi.fn(),
-  useSession: () => ({ data: null, isPending: false, error: null }),
-}));

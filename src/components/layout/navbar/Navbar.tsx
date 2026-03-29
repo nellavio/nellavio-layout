@@ -23,16 +23,14 @@ import { UserMenuButton } from "./parts/UserMenuButton";
 
 export const Navbar = () => {
   const t = useTranslations("navbar");
-  const setIsLoggingOut = useLayoutStore((state) => state.setIsLoggingOut);
   const setIsLoggingIn = useLayoutStore((state) => state.setIsLoggingIn);
   const fixedNavbar = useLayoutStore((state) => state.fixedNavbar);
   const navbarRef = useRef<HTMLElement>(null);
 
-  /** Clears login/logout transition flags on mount so stale state from a previous page doesn't persist. */
+  /** Clears login transition flag on mount so stale state from a previous page doesn't persist. */
   useEffect(() => {
-    setIsLoggingOut(false);
     setIsLoggingIn(false);
-  }, [setIsLoggingOut, setIsLoggingIn]);
+  }, [setIsLoggingIn]);
 
   /** Slides the navbar off-screen on scroll when not in fixed mode. Uses manual translateY because CSS sticky doesn't support hiding the navbar above the viewport. */
   useEffect(() => {

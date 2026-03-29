@@ -6,29 +6,11 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/i18n.ts");
 
 const isDev = process.env.NODE_ENV === "development";
 
-const originOf = (envVar) => {
-  const val = process.env[envVar];
-  return val ? new URL(val).origin : null;
-};
-
-const connectSrcDomains = [
-  ...new Set(
-    [
-      "'self'",
-      "https://raw.githubusercontent.com",
-      originOf("GRAPHQL_URL"),
-      originOf("NEXT_PUBLIC_AUTH_URL"),
-      isDev && "http://localhost:4000",
-    ].filter(Boolean),
-  ),
-].join(" ");
-
 const nextConfig = {
   reactStrictMode: true,
   turbopack: {
     root: __dirname,
   },
-  transpilePackages: ["@react-pdf/renderer"],
   typescript: {
     ignoreBuildErrors: false,
   },
@@ -62,7 +44,7 @@ const securityHeaders = [
     // limiting potential vectors for cross-site scripting (XSS) attacks
     // by explicitly whitelisting trusted sources for various content types
     key: "Content-Security-Policy",
-    value: `default-src 'self'; worker-src blob: 'self'; script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://res.cloudinary.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src ${connectSrcDomains}; frame-ancestors 'none'; frame-src 'none'`,
+    value: `default-src 'self'; worker-src blob: 'self'; script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://res.cloudinary.com https://avatars.githubusercontent.com; font-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com; frame-ancestors 'none'; frame-src 'none'`,
   },
   {
     // X-Frame-Options prevents our application from being embedded within iframes

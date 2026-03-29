@@ -1,11 +1,9 @@
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
-import { UserIcon } from "@/assets/icons/UserIcon";
 import { menuConfig } from "@/config/navigationConfig";
 import { useIsFirstRender } from "@/hooks/useIsFirstRender";
 import { Link } from "@/i18n/navigation";
-import { useSession } from "@/services/auth/auth-client";
 import { useLayoutStore } from "@/store/layoutStore";
 
 import { MenuCategory } from "./parts/MenuCategory";
@@ -15,9 +13,6 @@ import { SideMenuMobileProps } from "./types";
 
 export const SideMenuMobile = ({ isMobileMenuOpen }: SideMenuMobileProps) => {
   const toggleMobileMenu = useLayoutStore((state) => state.toggleMobileMenu);
-  const { data: sessionData, isPending } = useSession();
-  const isSignedIn = !!sessionData;
-  const isLoaded = !isPending;
   const t = useTranslations("sideMenu");
 
   /**
@@ -86,32 +81,16 @@ export const SideMenuMobile = ({ isMobileMenuOpen }: SideMenuMobileProps) => {
           })}
         </div>
         <div className="w-full">
-          {isLoaded && isSignedIn && sessionData?.user && (
-            <div className="w-full border-t-2 border-mainBorder">
-              <div className="flex items-center gap-3 px-6 py-4">
-                <div className="w-10 h-10 rounded-full bg-outlinedButtonBg border border-mainBorder flex items-center justify-center stroke-grayIcon fill-grayIcon">
-                  <UserIcon />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-primaryText font-medium text-sm">
-                    {sessionData.user.email}
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
-          {isLoaded && !isSignedIn && (
-            <div className="w-full border-t-0 border-mainBorder px-4 pt-8 mb-6">
-              <Link
-                href="/login"
-                tabIndex={0}
-                onClick={() => toggleMobileMenu()}
-                className="block xl:hidden mt-auto mb-8 rounded-xl w-full h-10 flex justify-center items-center font-medium border border-mainColor text-primaryText bg-sideMenuButtonBg hover:bg-sideMenuButtonBgHover mt-12"
-              >
-                {t("signIn")}
-              </Link>
-            </div>
-          )}
+          <div className="w-full border-t-0 border-mainBorder px-4 pt-8 mb-6">
+            <Link
+              href="/login"
+              tabIndex={0}
+              onClick={() => toggleMobileMenu()}
+              className="block xl:hidden mt-auto mb-8 rounded-xl w-full h-10 flex justify-center items-center font-medium border border-mainColor text-primaryText bg-sideMenuButtonBg hover:bg-sideMenuButtonBgHover mt-12"
+            >
+              {t("signIn")}
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

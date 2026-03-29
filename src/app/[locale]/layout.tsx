@@ -1,4 +1,3 @@
-import "dotenv/config";
 import "@/styles/globals.css";
 
 import { Metadata, Viewport } from "next";
@@ -46,13 +45,13 @@ export default async function RootLayout({
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nellavio.com"),
+  metadataBase: new URL("https://layout.nellavio.com"),
   title: {
-    default: "Nellavio",
+    default: "Nellavio Layout",
     template: "%s | Nellavio",
   },
   description:
-    "Open source dashboard starter with auth, i18n, dark/light mode, 26 charts and 80+ reusable UI components",
+    "Lightweight dashboard starter with sidebar, navbar, settings drawer, dark/light mode, i18n and 90+ reusable UI components",
   keywords: [
     "nextjs dashboard",
     "react dashboard",
@@ -63,7 +62,6 @@ export const metadata: Metadata = {
     "typescript dashboard",
     "tailwind dashboard",
     "recharts",
-    "better auth",
     "dashboard starter",
   ],
   authors: [{ name: "matt765", url: "https://github.com/matt765" }],
@@ -71,11 +69,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nellavio.com",
-    siteName: "Nellavio",
-    title: "Nellavio | Open Source Next.js Dashboard Starter",
+    url: "https://layout.nellavio.com",
+    siteName: "Nellavio Layout",
+    title: "Nellavio Layout | Open Source Next.js Dashboard Starter",
     description:
-      "Open source dashboard starter with auth, i18n, dark/light mode, 26 charts and 80+ reusable UI components",
+      "Lightweight dashboard starter with sidebar, navbar, settings drawer, dark/light mode, i18n and 90+ reusable UI components",
     images: [
       {
         url: "/og-image.png",
@@ -87,9 +85,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nellavio | Open Source Next.js Dashboard Starter",
+    title:
+      "Nellavio Layout | Open Source Next.js Lightweight Dashboard Starter",
     description:
-      "Open source dashboard starter with auth, i18n, dark/light mode, 26 charts and 80+ reusable UI components",
+      "Lightweight dashboard starter with sidebar, navbar, settings drawer, dark/light mode, i18n and 90+ reusable UI components",
     images: ["/og-image.png"],
   },
 };

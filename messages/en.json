@@ -1,27 +1,4 @@
 {
-  "homepage": {
-    "revenueOverTime": {
-      "title": "Revenue over time"
-    },
-    "threeSmallCards": {
-      "monthlyTarget": "Monthly target"
-    },
-    "fourSmallCards": {
-      "monthlyTarget": "Monthly target"
-    },
-    "bestSellingProducts": {
-      "title": "Bestselling products"
-    },
-    "customerSatisfaction": {
-      "title": "Customer satisfaction"
-    },
-    "revenuePerCountry": {
-      "title": "Revenue per country"
-    },
-    "weeklyPerformance": {
-      "title": "Weekly Performance"
-    }
-  },
   "pagination": {
     "previous": "Previous",
     "next": "Next",
@@ -31,181 +8,9 @@
     "results": "results",
     "itemsPerPage": "Items per page"
   },
-  "orders": {
-    "selectPlaceholder": {
-      "allProducts": "All Products",
-      "allUsers": "All Users",
-      "anyPrice": "Any price",
-      "anyDeliveryType": "Any delivery type",
-      "anyStatus": "Any status"
-    },
-    "tableHeader": {
-      "productName": "Product name",
-      "user": "User",
-      "price": "Price",
-      "deliveryType": "Delivery type",
-      "date": "Date",
-      "status": "Status"
-    },
-    "deliveryType": {
-      "twoDayShipping": "Two-day shipping",
-      "standardShipping": "Standard shipping",
-      "freeShipping": "Free shipping",
-      "expressShipping": "Express shipping"
-    },
-    "status": {
-      "inTransit": "In Transit",
-      "delivered": "Delivered",
-      "shipped": "Shipped"
-    },
-    "button": {
-      "clearFilters": "Clear filters",
-      "xlsx": "Export to XLSX"
-    },
-    "searchField": {
-      "searchOrders": "Search orders..."
-    },
-    "orderModal": {
-      "title": "Order details",
-      "id": "ID",
-      "product": "Product",
-      "customer": "Customer",
-      "price": "Price",
-      "shipping": "Shipping",
-      "date": "Date",
-      "status": "Status",
-      "priority": "Priority",
-      "normal": "Normal"
-    }
-  },
-  "customers": {
-    "tableHeader": {
-      "photo": "Photo",
-      "firstName": "First Name",
-      "lastName": "Last Name",
-      "city": "City",
-      "country": "Country",
-      "phone": "Phone",
-      "totalBuys": "Money spent"
-    },
-    "searchField": {
-      "searchCustomers": "Search customers..."
-    },
-    "button": {
-      "clearFilters": "Clear filters",
-      "clearFilter": "Clear filter",
-      "filterByCountry": "Filter by country",
-      "sortBy": "Sort By",
-      "ascending": "Ascending",
-      "descending": "Descending",
-      "clearSorting": "Clear sorting",
-      "xlsx": "Export to XLSX"
-    },
-    "country": {
-      "usa": "USA",
-      "australia": "Australia",
-      "france": "France",
-      "norway": "Norway",
-      "unitedKingdom": "United Kingdom"
-    },
-    "city": {
-      "newYork": "New York",
-      "munich": "Munich",
-      "cologne": "Cologne",
-      "london": "London"
-    },
-    "chip": {
-      "country": "Country",
-      "sortedBy": "Sorted by"
-    },
-    "customerModal": {
-      "moneySpent": "Money spent",
-      "totalOrders": "Total orders",
-      "phone": "Phone",
-      "email": "E-mail",
-      "returns": "Returns",
-      "loyaltyPoints": "Loyalty points"
-    }
-  },
-  "products": {
-    "header": {
-      "type": "Type",
-      "price": "Price",
-      "markup": "Markup",
-      "profit": "Profit",
-      "viewPhoto": "View photo"
-    },
-    "metrics": {
-      "inventoryStatus": "Inventory status",
-      "monthlyTarget": "Monthly target",
-      "orderFullfillment": "Order fulfillment",
-      "conversionRate": "Conversion rate"
-    },
-    "pdf": {
-      "exportToPdf": "Export to PDF"
-    },
-    "clipboard": {
-      "copiedToClipboard": "Copied to clipboard!"
-    },
-    "mobileList": {
-      "showAllProducts": "Show all products"
-    }
-  },
-  "analytics": {
-    "assetPerformance": {
-      "title": "Asset performance"
-    },
-    "todaySales": {
-      "title": "Today's sales"
-    },
-    "totalProfit": {
-      "title": "Total profit"
-    },
-    "revenueTrends": {
-      "title": "Revenue trends"
-    },
-    "yearOverview": {
-      "title": "Year overview"
-    },
-    "marketMetrics": {
-      "title": "Market metrics"
-    },
-    "revenueDistribution": {
-      "title": "Revenue distribution"
-    }
-  },
-  "calendar": {
-    "deleteEventModalTitle": "Are you sure?",
-    "deleteEventModalSubtitle": "Press yes if you want to",
-    "delete": "delete",
-    "move": "move",
-    "theEvent": "the event",
-    "yes": "Yes",
-    "cancel": "Cancel",
-    "addEventModalTitle": "New event",
-    "addEventModalSubtitle": "Please specify the time and title for your event",
-    "addEventModalPlaceholder": "Enter event title",
-    "addEventConfirmButton": "Confirm",
-    "addEventTitleRequiredError": "Event title is required",
-    "addEventLengthError": "Title exceeds 20 characters",
-    "addEventIncorrectTime": "End time must be later than start time"
-  },
-
-  "singleCharts": {
-    "bars": {
-      "title": "Product sales over time (USD)"
-    }
-  },
   "sideMenu": {
     "main": "Main",
     "dashboard": "Dashboard",
-    "eCommerce": "E-commerce",
-    "orders": "Orders",
-    "customers": "Customers",
-    "products": "Products",
-    "analytics": "Analytics",
-    "calendar": "Calendar",
-    "userProfile": "User Profile",
     "authentication": "Authentication",
     "login": "Login",
     "register": "Register",
@@ -215,15 +20,7 @@
     "forms": "Forms",
     "tables": "Tables",
     "charts": "Charts",
-    "shadcn": "Shadcn",
-    "tanstack": "Tanstack",
-    "recharts": "Recharts",
-    "singleCharts": "Single Charts",
     "pages": "Pages",
-    "area": "Area",
-    "bars": "Bars",
-    "scatter": "Scatter",
-    "line": "Line",
     "signIn": "Sign In",
     "language": "Language",
     "githubRepository": "GitHub Repository",
@@ -258,29 +55,6 @@
       "placeholder": "Search...",
       "noResults": "No results found",
       "sections": {
-        "revenueOverTime": "Revenue over time",
-        "bestsellingProducts": "Bestselling products",
-        "customerSatisfaction": "Customer satisfaction",
-        "revenuePerCountry": "Revenue per country",
-        "salesCard": "Sales",
-        "profitCard": "Profit",
-        "trafficCard": "Traffic",
-        "customersCard": "Customers",
-        "assetPerformance": "Asset performance",
-        "todaysSales": "Today's sales",
-        "totalProfit": "Total profit",
-        "revenueTrends": "Revenue trends",
-        "yearOverview": "Year overview",
-        "marketMetrics": "Market metrics",
-        "revenueDistribution": "Revenue distribution",
-        "customers": "Customers",
-        "calendar": "Calendar",
-        "orders": "Orders",
-        "products": "Products",
-        "profileHeader": "Profile header",
-        "about": "About",
-        "accountSettings": "Account settings",
-        "recentActivity": "Recent activity",
         "buttons": "Buttons",
         "command": "Command palette",
         "avatars": "Avatars",
@@ -328,12 +102,6 @@
       },
       "pages": {
         "dashboard": "Dashboard",
-        "analytics": "Analytics",
-        "customers": "Customers",
-        "calendar": "Calendar",
-        "orders": "Orders",
-        "products": "Products",
-        "userProfile": "Profile",
         "uiElements": "UI Elements",
         "forms": "Forms",
         "tables": "Tables",
@@ -407,41 +175,11 @@
   "breadcrumbs": {
     "firstPart": "Pages",
     "dashboard": "Dashboard",
-    "orders": "Orders",
-    "customers": "Customers",
-    "products": "Products",
-    "analytics": "Analytics",
-    "calendar": "Calendar",
-    "profile": "Profile",
     "charts": "Charts",
     "ui elements": "UI Elements",
     "forms": "Forms",
     "tables": "Tables",
-    "ecommerce": "E-commerce",
     "components": "Components"
-  },
-  "profile": {
-    "memberSince": "Member since",
-    "editProfile": "Edit Profile",
-    "saveChanges": "Save Changes",
-    "contactInformation": "Contact Information",
-    "email": "Email",
-    "phone": "Phone",
-    "location": "Location",
-    "socialLinks": "Social Links",
-    "quickStats": "Quick Stats",
-    "totalOrders": "Total Orders",
-    "completedTasks": "Completed Tasks",
-    "activeProjects": "Active Projects",
-    "about": "About",
-    "accountSettings": "Account Settings",
-    "emailNotifications": "Email Notifications",
-    "emailNotificationsDesc": "Receive email updates about your account",
-    "twoFactorAuth": "Two-Factor Authentication",
-    "twoFactorAuthDesc": "Add an extra layer of security to your account",
-    "darkMode": "Dark Mode",
-    "darkModeDesc": "Enable dark mode theme",
-    "recentActivity": "Recent Activity"
   },
   "uiElements": {
     "buttons": "Buttons",

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export interface Notification {
   id: string;
   title: string;
@@ -9,38 +7,24 @@ export interface Notification {
   isNew: boolean;
 }
 
+const MOCK_NOTIFICATIONS: Notification[] = [
+  {
+    id: "1",
+    title: "Notification title",
+    description: "This is a sample notification for demonstration purposes.",
+    time: "Just now",
+    icon: "info",
+    isNew: true,
+  },
+];
+
 /**
- * Fetches notification data from the `/api/notifications` server-side route on mount.
- * This route exists so notification data can be fetched server-side (similar to getData).
+ * Returns a static list of mock notifications for layout demonstration.
  */
 export const useNotificationsData = () => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchNotifications = async () => {
-      try {
-        const response = await fetch("/api/notifications");
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        setNotifications(data as Notification[]);
-      } catch (err: unknown) {
-        const errorMessage =
-          err instanceof Error ? err.message : "Unknown error";
-        setError(errorMessage);
-        console.error("Error fetching notifications:", err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchNotifications();
-  }, []);
-
-  return { notifications, isLoading, error };
+  return {
+    notifications: MOCK_NOTIFICATIONS,
+    isLoading: false,
+    error: null,
+  };
 };

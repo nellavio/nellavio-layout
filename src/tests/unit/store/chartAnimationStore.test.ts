@@ -20,27 +20,18 @@ describe("chartAnimationStore", () => {
   });
 
   it("markChartPageAsVisited adds page to array", () => {
-    useChartAnimationStore.getState().markChartPageAsVisited("homepage");
+    useChartAnimationStore.getState().markChartPageAsVisited("charts");
     expect(useChartAnimationStore.getState().visitedChartPages).toContain(
-      "homepage",
+      "charts",
     );
   });
 
   it("markChartPageAsVisited does not duplicate", () => {
     const { markChartPageAsVisited } = useChartAnimationStore.getState();
-    markChartPageAsVisited("homepage");
-    useChartAnimationStore.getState().markChartPageAsVisited("homepage");
+    markChartPageAsVisited("charts");
+    useChartAnimationStore.getState().markChartPageAsVisited("charts");
     expect(useChartAnimationStore.getState().visitedChartPages).toEqual([
-      "homepage",
-    ]);
-  });
-
-  it("markChartPageAsVisited accumulates different pages", () => {
-    useChartAnimationStore.getState().markChartPageAsVisited("homepage");
-    useChartAnimationStore.getState().markChartPageAsVisited("analytics");
-    expect(useChartAnimationStore.getState().visitedChartPages).toEqual([
-      "homepage",
-      "analytics",
+      "charts",
     ]);
   });
 

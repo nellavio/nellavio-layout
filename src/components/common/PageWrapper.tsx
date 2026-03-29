@@ -14,7 +14,7 @@ import {
 } from "./shadcn/breadcrumb";
 
 type LayoutType = "dashboard" | "content" | "table";
-type BreadcrumbCategory = "ecommerce" | "components" | "default";
+type BreadcrumbCategory = "components" | "default";
 
 interface PageConfig {
   layoutType: LayoutType;
@@ -23,12 +23,6 @@ interface PageConfig {
 
 const PAGE_CONFIG: Record<string, PageConfig> = {
   Dashboard: { layoutType: "dashboard", breadcrumbCategory: "default" },
-  Analytics: { layoutType: "content", breadcrumbCategory: "default" },
-  Profile: { layoutType: "content", breadcrumbCategory: "default" },
-  Orders: { layoutType: "table", breadcrumbCategory: "ecommerce" },
-  Customers: { layoutType: "table", breadcrumbCategory: "ecommerce" },
-  Products: { layoutType: "table", breadcrumbCategory: "ecommerce" },
-  Calendar: { layoutType: "table", breadcrumbCategory: "default" },
   Charts: { layoutType: "content", breadcrumbCategory: "components" },
   "UI Elements": { layoutType: "content", breadcrumbCategory: "components" },
   Forms: { layoutType: "content", breadcrumbCategory: "components" },
@@ -66,7 +60,6 @@ const LAYOUT_STYLES = {
 interface PageWrapperProps {
   children: ReactNode;
   pageName?: string;
-  dataForExport?: unknown;
   enableBreadcrumbLink?: boolean;
 }
 
@@ -95,8 +88,6 @@ export const PageWrapper = ({
     : DEFAULT_PAGE_CONFIG;
   const styles = LAYOUT_STYLES[pageConfig.layoutType];
 
-  const isEcommerce = pageConfig.breadcrumbCategory === "ecommerce";
-
   const getBreadcrumbFirstPart = (): string => {
     const { breadcrumbCategory } = pageConfig;
     if (breadcrumbCategory === "components") return t("components");
@@ -113,14 +104,6 @@ export const PageWrapper = ({
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
-          {isEcommerce && (
-            <span className="hidden xsm:contents">
-              <BreadcrumbItem>
-                <BreadcrumbLink disabledLink>{t("ecommerce")}</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-            </span>
-          )}
           <BreadcrumbItem>
             <BreadcrumbPage>
               {t(pageName?.toLowerCase() ?? "dashboard")}

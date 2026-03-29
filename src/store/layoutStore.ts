@@ -13,12 +13,8 @@ interface LayoutStore {
   setIsSideMenuOpen: (isOpen: boolean) => void;
   toggleMobileMenu: () => void;
   toggleSideMenu: () => void;
-  isLoggingOut: boolean;
-  setIsLoggingOut: (isLoggingOut: boolean) => void;
   isLoggingIn: boolean;
   setIsLoggingIn: (isLoggingIn: boolean) => void;
-  homepageLayout: "three-cards" | "four-cards";
-  setHomepageLayout: (layout: "three-cards" | "four-cards") => void;
   fontType: FontType;
   setFontType: (fontType: FontType) => void;
   sidebarDefaultState: SidebarDefaultState;
@@ -67,12 +63,8 @@ export const useLayoutStore = create<LayoutStore>()(
             };
           });
         },
-        isLoggingOut: false,
-        setIsLoggingOut: (isLoggingOut) => set(() => ({ isLoggingOut })),
         isLoggingIn: false,
         setIsLoggingIn: (isLoggingIn) => set(() => ({ isLoggingIn })),
-        homepageLayout: APP_DEFAULTS.homepageLayout,
-        setHomepageLayout: (layout) => set(() => ({ homepageLayout: layout })),
         fontType: APP_DEFAULTS.fontType,
         setFontType: (fontType) => set(() => ({ fontType })),
         sidebarDefaultState: APP_DEFAULTS.sidebarDefaultState,
@@ -90,7 +82,6 @@ export const useLayoutStore = create<LayoutStore>()(
       {
         name: "app-settings",
         partialize: (state) => ({
-          homepageLayout: state.homepageLayout,
           fontType: state.fontType,
           sidebarDefaultState: state.sidebarDefaultState,
           chartAnimationsEnabled: state.chartAnimationsEnabled,
